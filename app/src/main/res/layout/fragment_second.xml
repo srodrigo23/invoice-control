@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondFragment">
+
+<!--    https://abhiandroid.com/ui/tablelayout-->
+<!--    https://www.youtube.com/watch?v=x0X19LJJGjc-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button_second"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/previous"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/textview_second" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/textview_second"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/button_second"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:stretchColumns="*"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_column="1"
+                android:text="N."
+                android:layout_gravity="left"
+                android:padding="3dip"
+                />
+            <TextView
+                android:padding="3dip"
+                android:text="NIT" />
+            <TextView
+                android:text="FECHA"
+                android:padding="3dip"/>
+            <TextView
+                android:text="MONTO"
+                android:padding="3dip" />
+            <TextView
+                android:text="DETALLES"
+                android:padding="3dip" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_column="1"
+                android:text="1"
+
+                android:padding="3dip"
+                />
+            <TextView
+                android:padding="3dip"
+                android:text="3391839" />
+            <TextView
+                android:text="13/05/2021"
+                android:padding="3dip"/>
+            <TextView
+                android:text="2300.00"
+                android:padding="3dip" />
+
+            <Button
+                android:text="Det. fac."
+                android:layout_margin="3dip">
+            </Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_column="1"
+                android:text="1"
+
+                android:padding="3dip"
+                />
+            <TextView
+                android:padding="3dip"
+                android:text="3391839" />
+            <TextView
+                android:text="13/05/2021"
+                android:padding="3dip"/>
+            <TextView
+                android:text="2300.00"
+                android:padding="3dip" />
+
+            <Button
+                android:text="Det. fac."
+                android:layout_margin="3dip">
+            </Button>
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
