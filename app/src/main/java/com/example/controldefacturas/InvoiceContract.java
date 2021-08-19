@@ -5,7 +5,6 @@ import android.provider.BaseColumns;
 public class InvoiceContract {
 
     public static abstract class InvoiceEntry implements BaseColumns{
-
         public static final String TABLE_NAME = "invoice";
         public static final String ID = "id";
         public static final String NIT = "nit";
