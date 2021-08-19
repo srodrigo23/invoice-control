@@ -63,8 +63,6 @@ public class MainActivity extends AppCompatActivity {
         if(requestCode == REQUEST_CODE){
 //            Log.e (Tag, "OnRequestpermissionsResult:" + "Get Permissions" );
         }
-
-
     }
 
     @Override

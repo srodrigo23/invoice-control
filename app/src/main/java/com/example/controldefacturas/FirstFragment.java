@@ -11,28 +11,29 @@ import com.budiyev.android.codescanner.CodeScanner;
 import com.budiyev.android.codescanner.CodeScannerView;
 import com.budiyev.android.codescanner.DecodeCallback;
 
-import javax.xml.transform.Result;
-
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+/**
+ * https://github.com/yuriy-budiyev/code-scanner
+ */
+
 public class FirstFragment extends Fragment {
 
-//    https://github.com/yuriy-budiyev/code-scanner
-    private CodeScanner mCodeScanner;
-
+    private CodeScanner     mCodeScanner;
+    private CodeScannerView scannerView;
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
-            Bundle savedInstanceState
-    ) {
+            Bundle savedInstanceState) {
 
         final Activity activity = getActivity();
         View root = inflater.inflate(R.layout.fragment_first, container, false);
 
-        CodeScannerView scannerView = root.findViewById(R.id.scanner_view);
+        scannerView = root.findViewById(R.id.scanner_view);
         mCodeScanner = new CodeScanner(activity, scannerView);
+
         mCodeScanner.setDecodeCallback(new DecodeCallback() {
             @Override
             public void onDecoded(@NonNull com.google.zxing.Result result) {
@@ -52,15 +53,10 @@ public class FirstFragment extends Fragment {
             }
         });
         return root;
-
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
-
 //        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
